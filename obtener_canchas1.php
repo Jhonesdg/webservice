@@ -6,13 +6,13 @@ hola
 require 'Meta.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-/**
- * Obtiene todas las metas de la base de datos
- 
+
     // Manejar petición GET
     $complejos  = Meta::getAll();
     print $complejos;
-
+/**
+ * Obtiene todas las metas de la base de datos
+ 
     if ($complejos) {
 
        
