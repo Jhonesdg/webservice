@@ -25,6 +25,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         ));
     }
 */
+}else{
+    echo "la peticion no es get";
 }
 
 ?>
