@@ -49,6 +49,24 @@ class Meta
             return false;
         }
     }
+
+
+public static function usuario($email)
+    {
+       $consulta = "SELECT * FROM usuraios WHERE email = '$email'";
+        try {
+            // Preparar sentencia
+            $comando = Database::getInstance()->getDb()->prepare($consulta);
+            // Ejecutar sentencia preparada
+            $comando->execute();
+
+            return $comando->fetchAll(PDO::FETCH_ASSOC);
+
+        } catch (PDOException $e) {
+            return false;
+        }
+    }
+
    public static function reservas($email)
     {
        $consulta = "select co.nombre, ca.descripcion,r.fecha_reserva, r.fecha_creacion, r.hora_inicio, r.hora_fin
@@ -104,6 +122,28 @@ class Meta
         $cmd->execute(array($titulo, $descripcion, $fechaLim, $categoria, $prioridad, $idMeta));
 
         return $cmd;
+    }
+
+    
+    public static function insertusuario($email,
+        $pass,
+        $nombre,
+        $apellido,
+        $telefono)
+    {
+       $consulta = "INSERT INTO usuraios (email, pass, nombre, apellido, numero_telefono) VALUES ('$email','$pass','$nombre','$apellido','$telefono');";
+       print $consulta;
+        try {
+            // Preparar sentencia
+            $comando = Database::getInstance()->getDb()->prepare($consulta);
+            // Ejecutar sentencia preparada
+            $comando->execute();
+
+            return $comando->fetchAll(PDO::FETCH_ASSOC);
+
+        } catch (PDOException $e) {
+            return false;
+        }
     }
 
     /**
