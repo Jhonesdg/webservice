@@ -10,6 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     // Manejar petición GET
     $complejos  = Meta::getAll();
     echo $complejos;
+    echo "aqui ya deberia imprimir";
 /**
  * Obtiene todas las metas de la base de datos
  
