@@ -1,14 +1,18 @@
-hola2
+hola3
 <?php
 
 
 
 require 'Meta.php';
 
+    echo "aqui ya va a calidar";
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-
+    
+    echo "aqui entra";
     // Manejar petición GET
     $complejos  = Meta::getAll();
+
+    echo "aqui ya trajo";
     echo $complejos;
     echo "aqui ya deberia imprimir";
 /**
