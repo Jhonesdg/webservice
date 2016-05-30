@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     echo "aqui ya trajo";
     echo $complejos;
     echo "aqui ya deberia imprimir";
-/**
+
  * Obtiene todas las metas de la base de datos
  
     if ($complejos) {
@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         print json_encode(array("mensaje" => "Ha ocurrido un error"
         ));
     }
-*/
+
 }else{
     echo "la peticion no es get";
 }
