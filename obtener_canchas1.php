@@ -1,4 +1,4 @@
-hola
+hola2
 <?php
 
 
@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
     // Manejar petición GET
     $complejos  = Meta::getAll();
-    print $complejos;
+    echo $complejos;
 /**
  * Obtiene todas las metas de la base de datos
  
