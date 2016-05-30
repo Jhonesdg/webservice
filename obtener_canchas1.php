@@ -1,23 +1,16 @@
-hola4
 <?php
+/**
+ * Obtiene todas las metas de la base de datos
+ */
 
-
-   echo "aqui comienza el php";
 require 'Meta.php';
 
-    echo "aqui ya va a calidar";
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-    
-    echo "aqui entra";
+
     // Manejar petición GET
     $complejos  = Meta::getAll();
+    print $complejos;
 
-    echo "aqui ya trajo";
-    echo $complejos;
-    echo "aqui ya deberia imprimir";
-
-
- 
     if ($complejos) {
 
        
@@ -28,9 +21,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         print json_encode(array("mensaje" => "Ha ocurrido un error"
         ));
     }
-
-}else{
-    echo "la peticion no es get";
 }
-
-?>
