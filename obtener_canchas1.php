@@ -1,12 +1,12 @@
 hola
 <?php
-echo "el codigo esta malo";
+
+
+
+require 'Meta.php';
 /**
  * Obtiene todas las metas de la base de datos
  
-
-require 'Meta.php';
-
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
     // Manejar petición GET
