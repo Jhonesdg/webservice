@@ -4,8 +4,9 @@
  * Representa el la estructura de las metas
  * almacenadas en la base de datos
  */
+echo "aqui el meta";
 require 'Database.php';
-
+echo "aqui el meta2";
 class Meta
 {
     function __construct()
