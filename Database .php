@@ -3,8 +3,10 @@
  * Clase que envuelve una instancia de la clase PDO
  * para el manejo de la base de datos
  */
-
+echo "aqui el database";
 require_once 'mysql_login.php';
+echo "aqui el database2";
+
 
 
 class Database
