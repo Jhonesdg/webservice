@@ -8,11 +8,11 @@ require 'Meta.php';
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
     // Manejar petición GET
-    if (isset($_GET['email']))
+    if (isset($_GET['imail']))
     {
 
     }
-    $canchas = Meta::usuario($_GET['email']);
+    $canchas = Meta::reservas($_GET['imail']);
 
     if ($canchas) {
 
@@ -21,6 +21,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
         print json_encode($datos);
     } else {
-        print json_encode(array(  [ "mensaje" => "Ha ocurrido un error"]       ));
+        print json_encode(array( "mensaje" => "Ha ocurrido un error"  ));
     }
 }
